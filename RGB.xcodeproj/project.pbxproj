@@ -10,6 +10,7 @@
 		9D34AB811D0343C800683C66 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D34AB801D0343C800683C66 /* Curry.framework */; };
 		9D34AB831D0343F500683C66 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D34AB821D0343F500683C66 /* Quick.framework */; };
 		9D34AB851D03440800683C66 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D34AB841D03440800683C66 /* Nimble.framework */; };
+		9D34AB891D03490D00683C66 /* RGBUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D34AB881D03490D00683C66 /* RGBUIColor.swift */; };
 		9DACA20B1D02DC0B00025EF7 /* RGB.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DACA20A1D02DC0B00025EF7 /* RGB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DACA2121D02DC0C00025EF7 /* RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DACA2071D02DC0B00025EF7 /* RGB.framework */; };
 		9DACA2171D02DC0C00025EF7 /* RGBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DACA2161D02DC0C00025EF7 /* RGBTests.swift */; };
@@ -29,6 +30,7 @@
 		9D34AB801D0343C800683C66 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
 		9D34AB821D0343F500683C66 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 		9D34AB841D03440800683C66 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		9D34AB881D03490D00683C66 /* RGBUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBUIColor.swift; sourceTree = "<group>"; };
 		9DACA2071D02DC0B00025EF7 /* RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DACA20A1D02DC0B00025EF7 /* RGB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGB.h; sourceTree = "<group>"; };
 		9DACA20C1D02DC0B00025EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				9DACA20A1D02DC0B00025EF7 /* RGB.h */,
 				9DACA20C1D02DC0B00025EF7 /* Info.plist */,
+				9D34AB881D03490D00683C66 /* RGBUIColor.swift */,
 			);
 			path = RGB;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D34AB891D03490D00683C66 /* RGBUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,7 @@
 		9DACA21C1D02DC0C00025EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -344,12 +349,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = us.the.mac.frameworks.RGB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9DACA21D1D02DC0C00025EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
